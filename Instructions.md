@@ -16,12 +16,10 @@
 * Add a job to run tests
   - Add a command in your `package.json` to run unit tests, like this:
   ```
-  ...
   "scripts": {
     "start": "nodemon src/index.js",
     "test": "jest ."
   },
-  ...
   ```
   - Ensure tests pass locally
   - Add a stage to run unit tests on the CI
