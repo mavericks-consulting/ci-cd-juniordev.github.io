@@ -15,7 +15,7 @@
   
 * Add a job to run tests
   - Add a command in your `package.json` to run unit tests, like this:
-  ```
+  ```;
   "scripts": {
     "start": "nodemon src/index.js",
     "test": "jest ."
@@ -44,6 +44,13 @@
               requires:
                 - lint
     ```
- 
-
+     - To add the deployment job you need the following:
+      1) Create a Heroku App:
+      ``` heroku create APP_NAME ```
+      2) Fetch your Heroku API_KEY and APP_NAME from profile settings
+      3) Add the environment variables: HEROKU_API_KEY and HEROKU_APP_NAME to Circle CI: Refer to https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project
+      4) Use the below mentioned for deploying to Heroku:
+      ```
+      git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+      ```
 
