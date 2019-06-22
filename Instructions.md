@@ -46,7 +46,7 @@
     ```
      - To add the deployment job you need the following:
       1) Create a Heroku App:
-      ``` heroku create APP_NAME ```
+      ``` heroku create APP_NAME(replace it with a name of your choice ) ```
       2) Fetch your Heroku API_KEY and APP_NAME from profile settings
       3) Add the environment variables: HEROKU_API_KEY and HEROKU_APP_NAME to Circle CI: Refer to https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project
       4) Use the below mentioned for deploying to Heroku:
